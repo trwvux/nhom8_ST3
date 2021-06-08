@@ -37,7 +37,6 @@ class AdminOrdersController extends Controller
 
     public function update(Request $request, $order_id)
     {
-
         $order = Order::find($order_id);
         $order->order_status = 1;
         $order->save();

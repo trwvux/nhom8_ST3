@@ -12,7 +12,7 @@
 </script>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" >
         @include('client.common.header')
 
         @if ($layout ?? 'default' == 'home')

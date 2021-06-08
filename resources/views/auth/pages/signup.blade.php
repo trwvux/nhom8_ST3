@@ -1,7 +1,7 @@
 @extends('layouts.auth', ['title' => 'Sign Up'])
 
 @section('content')
-    <div class="wrap d-md-flex">
+    <!-- <div class="wrap d-md-flex">
         <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
             <div class="text w-100">
                 <h2>Đăng ký một tài khoản</h2>
@@ -38,5 +38,57 @@
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
+    <div class="limiter">
+		<div class="container-login100" style="background-image: url('auth/images/bg-01.jpg');">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <form class="signin-form" method="POST">
+                     @csrf
+					<span class="login100-form-title p-b-49">
+						Đăng Ký
+					</span>
+                    <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="email" name="email" placeholder="Nhập email của bạn..." required>
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
+						<span class="label-input100">Tên Tài Khoản</span>
+						<input class="input100" type="text" name="username" placeholder="Nhập tên tài khoản của bạn..." required>
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
+						<span class="label-input100">Mật Khẩu</span>
+						<input class="input100" type="password" name="password" placeholder="Nhập mật khẩu của bạn..." required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">Nhập Lại Mật Khẩu</span>
+						<input class="input100" type="password" name="repassword" placeholder="Nhập lại mật khẩu của bạn..." required>
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                    <br>
+                    <br>
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button class="login100-form-btn">
+								Đăng Ký
+							</button>
+						</div>
+					</div>
+					<div class="flex-col-c p-t-155">
+						<span class="txt1 p-b-17">
+							Bạn có một tài khoản?
+						</span>
+                        <a href="{{ asset('sign-in') }}" class="btn btn-white btn-outline-white">Đăng Nhập</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 @endsection

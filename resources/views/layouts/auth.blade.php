@@ -13,13 +13,13 @@
 
 <body>
     <section class="ftco-section">
-        <div class="container">
+        <!-- <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-10">
+                <div class="col-md-12 col-lg-10"> -->
                     @yield('content')
-                </div>
+                <!-- </div>
             </div>
-        </div>
+        </div> -->
     </section>
 
     @include('auth.base.script')

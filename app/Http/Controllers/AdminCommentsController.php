@@ -17,21 +17,12 @@ class AdminCommentsController extends Controller
         $comments = $this->paginate($comments, $perPage);
 
         return view(
-            'admin.pages.comments.index',
-            [
+            'admin.pages.comments.index',[
                 "comments" => $comments,
                 "countAllComment" => $countAllComment,
                 'perPage' => $perPage
-            ]
-        );
+            ]);
     }
-
-    public function destroy($id)
-    {
-        Comment::where("comment_id", $id)->delete();
-        return redirect()->back()->with("alert", "Xóa thành công.");
-    }
-
     public function store(Request $request)
     {
         $rating = request("rating");
@@ -49,4 +40,10 @@ class AdminCommentsController extends Controller
 
         return redirect()->back();
     }
+
+    public function destroy($id)
+    {
+        Comment::where("comment_id", $id)->delete();
+        return redirect()->back()->with("alert", "Xóa thành công.");
+    } 
 }

@@ -21,7 +21,7 @@
         </div>
     </section>
 
-    @include('client.home.testimonial')
+    <!-- @include('client.home.testimonial') -->
 
     <section class="ftr__product__area ptb--100">
         <div class="container">

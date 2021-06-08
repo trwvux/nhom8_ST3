@@ -16,9 +16,7 @@ class AdminUsersController extends Controller
     {
         $users = User::orderBy("user_id", "DESC");
         $countAllUser = User::all()->count();
-        // var_dump($users[0]->comments[0]->comment_content);
-
-        // search form
+        //search form
         $search = request()->query("search");
         if ($search) {
             $users = User::query()
@@ -26,7 +24,7 @@ class AdminUsersController extends Controller
 
             $countAllUser = $users->count();
         }
-        // users pagination
+        //pagination
         $perPage = request()->query("perPage");
         if (!$perPage) $perPage = 6;
         $users = $users->paginate($perPage);
@@ -50,7 +48,7 @@ class AdminUsersController extends Controller
         $user = new User;
         $getUsers = User::where("user_username", request('username'))->get();
         if (count($getUsers) > 0)
-            return redirect()->back()->with('alert', 'Tên người dùng đã tồn tại.');
+            return redirect()->back()->with('alert', 'Tên người dùng tồn tại.');
         $user->user_username = request('username');
         $hashed = Hash::make(request('password'), ['rounds' => 12,]);
         $user->user_password = $hashed;
@@ -67,6 +65,7 @@ class AdminUsersController extends Controller
 
     public function edit($id)
     {
+        //edit user
         $user = User::where("user_id", $id)->get()[0];
         return view('admin.pages.users.edit', [
             'user' => $user
@@ -96,7 +95,6 @@ class AdminUsersController extends Controller
         foreach ($orders as $order) {
             OrderDetail::where("order_id", $order->order_id)->delete();
         }
-
         Order::where("user_id", $id)->delete();
         User::where("user_id", $id)->delete();
         return redirect()->back()->with("alert", "Xóa thành công.");

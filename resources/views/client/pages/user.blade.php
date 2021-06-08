@@ -10,7 +10,7 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h2 style="font-size: 17px; margin-bottom: 15px">
-                        Sản phẩm bạn đã đặt hàng.</h2>
+                        Chờ vận chuyển</h2>
                     <div class="table-content table-responsive">
                         <table>
                             <thead>
@@ -20,7 +20,7 @@
                                     <th class="product-price">Giá</th>
                                     <th class="product-quantity">Số Lượng</th>
                                     <th class="product-subtotal">Tổng Cộng</th>
-                                    <th class="product-thumbnail">Tổng Tiền</th>
+                                    <th class="product-thumbnail">Thành Tiền</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -57,7 +57,7 @@
                                                     VNĐ</span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input type="number" value="{{ $detail->detail_quantity }}" disabled />
+                                                <input style="padding-left: 25px" type="number" value="{{ $detail->detail_quantity }}" disabled />
                                             </td>
                                             <td class="product-subtotal">
                                                 {{ number_format($product->product_price * $detail->detail_quantity) }}
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <h2 style="font-size: 17px; margin-bottom: 15px">
-                        Sản phẩm chúng tôi đã giao cho bạn.</h2>
+                        Đã nhận hàng</h2>
                     <div class="table-content table-responsive">
                         <table>
                             <thead>
@@ -88,7 +88,7 @@
                                     <th class="product-price">Giá</th>
                                     <th class="product-quantity">Số Lượng</th>
                                     <th class="product-subtotal">Tổng Cộng</th>
-                                    <th class="product-thumbnail">Tổng Tiền</th>
+                                    <th class="product-thumbnail">Thành Tiền</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -125,7 +125,7 @@
                                                     VNĐ</span>
                                             </td>
                                             <td class="product-quantity">
-                                                <input type="number" value="{{ $detail->detail_quantity }}" disabled />
+                                                <input style="padding-left: 25px" type="number" value="{{ $detail->detail_quantity }}" disabled />
                                             </td>
                                             <td class="product-subtotal">
                                                 {{ number_format($product->product_price * $detail->detail_quantity) }}

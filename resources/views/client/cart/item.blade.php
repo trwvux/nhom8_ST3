@@ -8,9 +8,9 @@
         <span class="amount">{{ number_format($product->product_price) }} VNĐ</span>
     </td>
     <td class="product-quantity">
-        <input type="number" value="{{ $product->product_quantity }}" disabled />
         <div style="margin-top: 10px">
             <a class="btn btn-primary" href="{{ asset('cart?increase=1&product=' . $product->product_id) }}" role="button">+</a>
+            <input  style="padding-left: 25px" type="number" value="{{ $product->product_quantity }}" disabled />
             <a class="btn btn-primary" href="{{ asset('cart?decrease=1&product=' . $product->product_id) }}" role="button">--</a>
         </div>
     </td>

@@ -24,10 +24,8 @@ class AdminProductsController extends Controller
             $products = Product::query()
                 ->where('product_name', 'LIKE', "%{$search}%")
                 ->orWhere('product_description', 'LIKE', "%{$search}%");
-
             $countAllProduct = $products->count();
         }
-
         // products pagination
         $perPage = request()->query("perPage");
         if (!$perPage) $perPage = 6;
