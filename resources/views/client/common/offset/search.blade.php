@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="search__inner">
                     <form action="{{ asset("products") }}" method="GET">
-                        <input name="search" placeholder="Nhập và đập nút enter để tìm kiếm sản phẩm..." type="text">
+                        <input name="search" placeholder="Nhập từ khóa..." type="text">
                         <button type="submit"></button>
                     </form>
                     <div class="search__close__btn">
