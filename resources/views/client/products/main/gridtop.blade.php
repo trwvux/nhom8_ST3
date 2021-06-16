@@ -1,10 +1,10 @@
 <div class="text-center" style="font-size: 2em; font-weight: 800; margin-bottom: 2em">
     @if (request()->query('search'))
-        Kết quả tìm kiếm cho "{{ request()->query('search') }}"
+        Kết quả tìm kiếm cho "{{ request()->query('search') }}" 
     @elseif (request()->query('manufacturer'))
-        Hãng sản xuất: {{ $nameManufacturer }}
+        Hãng sản xuất:  {{ $nameManufacturer }}
     @elseif (request()->query('category'))
-        Chuyên mục: {{ $nameCategory }}
+        Danh mục: {{ $nameCategory }}
     @endif
 </div>
 <div class="htc__grid__top">

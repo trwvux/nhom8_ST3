@@ -1,6 +1,6 @@
 <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40">
     <div class="htc__product__leftsidebar">
-        <div class="htc__category" style="margin-top: 0">
+        <div class="htc__category" style="margin-top: 70px">
             <h4 class="title__line--4">Hãng sản xuất</h4>
             <ul class="ht__cat__list">
                 @foreach ($manufacturers as $manufacturer)

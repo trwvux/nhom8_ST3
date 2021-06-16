@@ -35,6 +35,13 @@
                                             </label>
                                         </div>
                                     @endforeach
+                                    <!-- <select class="form-control" name="categories" id="">
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->category_id }}">
+                                                {{ $category->category_name }}
+                                            </option>
+                                        @endforeach
+                                    </select> -->
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Mô Tả</label>

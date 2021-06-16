@@ -15,7 +15,7 @@
                             <ul class="main__menu">
                                 <li class="drop"><a href="{{ asset('') }}">Trang Chủ</a></li>
                                 <li class="drop"><a href="{{ asset('products') }}">Tất Cả Sản Phẩm</a></li>
-                                <li class="drop"><a href="{{ asset('products?manufacturer=1') }}">Hãng Sản Xuất</a>
+                                <li class="drop"><a href="{{ asset('products?manufacturer=2') }}">Hãng Sản Xuất</a>
                                     <ul class="dropdown">
                                         @foreach ($manufacturers as $manufacturer)
                                             <li><a
@@ -71,7 +71,7 @@
                             </div>
                             <div class="header__account">
                                 <a style="display: flex" href="{{ asset('user') }}">
-                                    <i class="icon-user icons" style="margin-right: 10px; margin-bottom: 10px"></i>
+                                    <i class="icon-user icons" style="margin-right: 10px; padding-bottom: 10px"></i>
                                     {{ session('.config_user') ? session('.config_user')->user_username : '' }}</a>
                             </div>
                             @if (session('.config_user'))
@@ -82,7 +82,7 @@
                                 </div>
                             @endif
                             <div class="htc__shopping__cart">
-                                <a class="cart__menu" href="#"><i class="icon-handbag icons"></i>
+                                <a style="margin-top: 10px;" class="cart__menu" href="#"><i class="icon-handbag icons"></i>
                                     <span class="htc__qua">{{ count($cartProducts) }}</span></a>
                             </div>
                         </div>
