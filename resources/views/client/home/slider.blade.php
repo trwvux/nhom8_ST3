@@ -8,10 +8,10 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                         <div class="slide">
                             <div class="slider__inner">
-                                <h2>collection 2018</h2>
-                                <h1>NICE CHAIR</h1>
+                                <h2>Âm Nhạc Thính Phòng</h2>
+                                <h1>PIANO</h1>
                                 <div class="cr__btn">
-                                    <a href="cart.html">Shop Now</a>
+                                    <a href="{{ asset('products') }}">Mua Ngay</a>
                                 </div>
                             </div>
                         </div>
@@ -32,10 +32,10 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                         <div class="slide">
                             <div class="slider__inner">
-                                <h2>collection 2018</h2>
-                                <h1>NICE CHAIR</h1>
+                                <h2>The Night Show</h2>
+                                <h1>SAXOPHON</h1>
                                 <div class="cr__btn">
-                                    <a href="cart.html">Shop Now</a>
+                                    <a href="{{ asset('products') }}">Mua Ngay</a>
                                 </div>
                             </div>
                         </div>

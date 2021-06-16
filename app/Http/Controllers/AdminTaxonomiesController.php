@@ -56,14 +56,14 @@ class AdminTaxonomiesController extends Controller
     {
 
         if (request()->query("type") == "manufacturer") {
-            // làm hãng sx trong này
+            // edit manufactures
             $manufacturer = Manufacturer::where("manufacturer_id", $id)->get()[0];
             return view('admin.pages.taxonomies.edit-manufacturer', [
                 'manufacturer' => $manufacturer,]);
         }
 
         if (request()->query("type") == "category") {
-            // làm chuyen muc trong này
+            // edit categories
             $category = Category::where("category_id", $id)->get()[0];
             return view('admin.pages.taxonomies.edit-category', [
                 'category' => $category,]);

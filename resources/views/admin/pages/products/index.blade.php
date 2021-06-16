@@ -37,10 +37,11 @@
                                 <tr>
                                     <th style="width:25%;"></th>
                                     <th style="width:10%;">Mã Hàng</th>
-                                    <th style="width:25%">Tên Hàng</th>
+                                    <th style="width:20%">Tên Hàng</th>
                                     <th style="width:10%">Hãng</th>
-                                    <th style="width:25%">Giá</th>
-                                    <th style="width:25%">Số Lượng</th>
+                                    <th style="width:15%">Danh Mục</th>
+                                    <th style="width:20%">Giá</th>
+                                    <th style="width:10%">Số Lượng</th>
                                     <th style="width:30%">Thời Gian</th>
                                     <th>Hàng Động</th>
                                 </tr>
@@ -55,13 +56,14 @@
                                     <tr>
                                         <td><img style="width: 100%;"
                                                 src="{{ asset('assets/images/' . $product->product_image) }}" alt=""></td>
-                                        <td>{{ $product->product_id }}</td>
+                                        <td style="text-align: center">{{ $product->product_id }}</td>
                                         <td><a
                                                 href="{{ asset('products/' . $product->product_id) }}">{{ $product->product_name }}</a>
                                         </td>
                                         <td>{{ $product->manufacturer->manufacturer_name }}</td>
-                                        <td>{{ number_format($product->product_price) }} VNĐ</td>
-                                        <td>{{ $product->product_available }}</td>
+                                        <td>{{ $product->categories->category_name }}</td>
+                                        <td style="text-align: right">{{ number_format($product->product_price) }} VNĐ</td>
+                                        <td style="text-align: center">{{ $product->product_available }}</td>
                                         <td>{{ $product->created_at }}</td>
                                         <td class="table-action">
                                             <div class="d-flex">

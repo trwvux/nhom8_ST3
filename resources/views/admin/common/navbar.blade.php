@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand navbar-light navbar-bg">
     <a class="sidebar-toggle d-flex">
-        <i class="hamburger align-self-center"></i>
+        <i class="hamburger align-self-center"></i>  
     </a>
-
+    <h1>Musical Instrument</h1>
     <div class="navbar-collapse collapse">
         <ul class="navbar-nav navbar-align">
             <li class="nav-item dropdown">

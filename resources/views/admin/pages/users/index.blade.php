@@ -31,7 +31,7 @@
                                 <tr>
                                     <th style="width:20%;">Id</th>
                                     <th style="width:30%">Tài khoản</th>
-                                    <th style="width:25%">Quyền Hạn</th>
+                                    <th style="width:25%">Phân Quyền</th>
                                     <th style="width:25%">Thời Gian</th>
                                     <th>Hành Động</th>
                                 </tr>

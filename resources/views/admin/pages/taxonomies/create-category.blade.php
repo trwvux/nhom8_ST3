@@ -4,7 +4,7 @@
     <main class="content">
         <div class="container-fluid p-0">
 
-            <h1 class="h3 mb-3">Thêm Chuyên Mục</h1>
+            <h1 class="h3 mb-3">Thêm Danh Mục</h1>
 
             <div class="row">
                 <div class="col-12 col-6">
@@ -17,7 +17,7 @@
                                     <label class="form-label">Tên Chuyên Mục</label>
                                     <input name="name" type="text" class="form-control" placeholder="Nhập tên..." required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Tạo Mới</button>
+                                <button type="submit" class="btn btn-primary">Thêm</button>
                             </form>
                         </div>
                     </div>

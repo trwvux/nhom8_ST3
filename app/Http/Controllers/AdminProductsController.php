@@ -46,7 +46,7 @@ class AdminProductsController extends Controller
     public function store(Request $request) // thêm
     {
         $name = request("name");
-        $manufacturer = request("manufacturer");
+        $manufactures = request("manufacturer");
         $categories = request("categories");
         $description = request("description");
         $price = request("price");
@@ -56,7 +56,8 @@ class AdminProductsController extends Controller
 
         $product = new Product;
         $product->product_name = $name;
-        $product->manufacturer_id = $manufacturer;
+        $product->manufacturer_id = $manufactures;
+        $product->category_id = $categories;
         $product->product_description = $description;
         $product->product_price = $price;
         $product->product_available = $available;
@@ -64,16 +65,8 @@ class AdminProductsController extends Controller
         $product->save();
         $product = $product->fresh();
 
-        if ($categories)
-            for ($i = 0; $i < count($categories); $i++) {
-                $categorizable = new Categorizable;
-                $categorizable->category_id = $categories[$i];
-                $categorizable->product_id = $product->product_id;
-                $categorizable->save();
-            }
-
         return redirect("/be-admin/products")
-            ->with('alert', "Tạo sản phẩm thành công!");
+            ->with('alert', "Thêm thành công!");
     }
 
     public function show($id) // hiển thị
@@ -92,7 +85,7 @@ class AdminProductsController extends Controller
     public function update(Request $request, $id) //sửa 
     {
         $name = request("name");
-        $manufacturer = request("manufacturer");
+        $manufactures = request("manufacturer");
         $categories = request("categories");
         $description = request("description");
         $price = request("price");
@@ -102,22 +95,14 @@ class AdminProductsController extends Controller
 
         $product = Product::find($id);
         $name && $product->product_name = $name;
-        $manufacturer && $product->manufacturer_id = $manufacturer;
+        $manufactures && $product->manufacturer_id = $manufactures;
+        $categories && $product->category_id = $categories;
         $description && $product->product_description = $description;
         $price && $product->product_price = $price;
         $available && $product->product_available = $available;
         $image && $product->product_image =  $image->getClientOriginalName();
         $product->save();
 
-        Categorizable::where("product_id", $id)->delete();
-        // error_log(json_encode($categories));
-        if ($categories)
-            for ($i = 0; $i < count($categories); $i++) {
-                $categorizable = new Categorizable;
-                $categorizable->category_id = $categories[$i];
-                $categorizable->product_id = $product->product_id;
-                $categorizable->save();
-            }
         return redirect("/be-admin/products/" . $id . "/edit")
             ->with("alert", "Cập nhật thành công.");
     }
@@ -125,7 +110,6 @@ class AdminProductsController extends Controller
     public function destroy($id) // xóa
     {
         Comment::where("product_id", $id)->delete();
-        Categorizable::where("product_id", $id)->delete();
         Product::where("product_id", $id)->delete();
         return redirect()->back()->with("alert", "Xóa thành công.");
     }

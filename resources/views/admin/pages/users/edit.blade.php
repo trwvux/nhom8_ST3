@@ -3,7 +3,7 @@
 @section('content')
     <main class="content">
         <div class="container-fluid p-0">
-            <h1 class="h3 mb-3">Sửa Người Dùng</h1>
+            <h1 class="h3 mb-3">Cập Nhật Người Dùng</h1>
             <div class="row">
                 <div class="col-12 col-6">
                     <div class="card px-5">
@@ -22,7 +22,7 @@
                                     value = "...">
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-label">Quyền Hạn</label>
+                                    <label class="form-label">Phân Quyền</label>
                                     <select class="form-control" name="permission" id="" required>
                                         <option value="1" 
                                         @if($user->user_permission == '1')
@@ -36,7 +36,7 @@
                                         >Quản trị viên</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Sửa</button>
+                                <button type="submit" class="btn btn-primary">Cập Nhật</button>
                             </form>
                         </div>
                     </div>

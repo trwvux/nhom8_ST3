@@ -15,7 +15,7 @@
                                     <label class="form-label">Tên Hãng Sản Xuất</label>
                                     <input name="name" type="text" class="form-control" placeholder="Nhập tên..." required>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Tạo Mới</button>
+                                <button type="submit" class="btn btn-primary">Thêm</button>
                             </form>
                         </div>
                     </div>

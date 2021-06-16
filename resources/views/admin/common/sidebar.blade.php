@@ -1,12 +1,12 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="{{ asset('be-admin/products/') }}">
-            <span class="align-middle">Quản trị</span>
+            <span style="text-align: center" class="align-middle">Quản trị</span>
         </a>
 
         <ul class="sidebar-nav">
             <li class="sidebar-header">
-                Danh mục
+                
             </li>
 
             <li class="sidebar-item {{ request()->getRequestUri() === '/be-admin/products' ? 'active' : "" }}">

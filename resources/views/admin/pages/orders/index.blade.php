@@ -83,7 +83,7 @@
                                                     VNĐ</span>
                                             </td>
                                             @if ($index == 1)
-                                                <td rowspan="{{ count($order->details) }}">
+                                                <td style="text-align: right" rowspan="{{ count($order->details) }}">
                                                     {{ number_format($total) }} VNĐ
                                                 </td>
                                                 <td rowspan="{{ count($order->details) }}">

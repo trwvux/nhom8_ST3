@@ -15,7 +15,7 @@ class Product extends Model
 
     public function categories()
     {
-        return $this->belongsToMany('App\Category', 'categorizable', 'product_id', 'category_id');
+        return $this->belongsTo('App\Category', 'category_id');
     }
 
     public function comments()

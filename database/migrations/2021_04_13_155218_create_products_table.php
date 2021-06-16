@@ -22,7 +22,9 @@ class CreateProductsTable extends Migration
             $table->integer('product_available')->default(0);
 
             $table->unsignedBigInteger('manufacturer_id');
+            $table->unsignedBigInteger('category_id');
             $table->foreign('manufacturer_id')->references('manufacturer_id')->on('manufacturers');
+            $table->foreign('category_id')->references('category_id')->on('categories');
 
             $table->timestamps();
         });

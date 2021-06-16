@@ -27,7 +27,7 @@
                             <tbody>
                             @foreach($manufacturers as $manufacturer)
                                 <tr>
-                                    <td>{{$manufacturer->manufacturer_id}}</td>
+                                    <td style="text-align: center">{{$manufacturer->manufacturer_id}}</td>
                                     <td>{{$manufacturer->manufacturer_name}}</td>
                                     <td class="table-action">
                                         <div class="d-flex align-items-center">
@@ -73,7 +73,7 @@
                             <tbody>
                                 @foreach($categories as $category)
                                 <tr>
-                                    <td>{{$category->category_id}}</td>
+                                    <td style="text-align: center">{{$category->category_id}}</td>
                                     <td>{{$category->category_name}}</td>
                                     <td class="table-action">
                                         <div class="d-flex align-items-center">
