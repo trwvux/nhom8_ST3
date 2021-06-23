@@ -48,8 +48,13 @@ class AdminUsersController extends Controller
         $user = new User;
         $getUsers = User::where("user_username", request('username'))->get();
         if (count($getUsers) > 0)
-            return redirect()->back()->with('alert', 'Tên người dùng tồn tại.');
+            return redirect()->back()->with('alert', 'Tên người dùng đã tồn tại.');
+        $getUsers = User::where("user_email", request('email'))->get();
+        if (count($getUsers) > 0)
+            return redirect()->back()->with('alert', 'Email đã tồn tại.');
         $user->user_username = request('username');
+        $user->user_email = request('email');
+        $user->user_email_valid = 1;
         $hashed = Hash::make(request('password'), ['rounds' => 12,]);
         $user->user_password = $hashed;
         $user->user_permission =  request('permission');

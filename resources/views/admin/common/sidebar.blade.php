@@ -17,7 +17,7 @@
 
             <li class="sidebar-item {{ request()->getRequestUri() === '/be-admin/taxonomies' ? 'active' : "" }}">
                 <a class="sidebar-link" href="{{ asset('be-admin/taxonomies') }}">
-                    <i class="align-middle" data-feather="tag"></i> <span class="align-middle">Hãng và Loại</span>
+                    <i class="align-middle" data-feather="tag"></i> <span class="align-middle">Hãng và Danh Mục</span>
                 </a>
             </li>
 

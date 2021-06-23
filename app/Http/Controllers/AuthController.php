@@ -105,7 +105,7 @@ class AuthController extends Controller
         $newUser->user_password = $hashed;
         $newUser->save();
 
-        $hashEmail = Hash::make($newUser->user_email, ['rounds' => 5,]);
+        $hashEmail = sha1($newUser->user_email);
         Mail::raw(
             'Vui lòng xác nhận địa chỉ email ở đây: ' . url('/valid-email/' . $newUser->user_username . "/" . $hashEmail),
             function ($message) use ($newUser) {

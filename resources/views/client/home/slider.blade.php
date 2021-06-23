@@ -32,7 +32,7 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                         <div class="slide">
                             <div class="slider__inner">
-                                <h2>The Night Show</h2>
+                                <h2>Jazz thập niên 80 - 90</h2>
                                 <h1>SAXOPHON</h1>
                                 <div class="cr__btn">
                                     <a href="{{ asset('products') }}">Mua Ngay</a>
